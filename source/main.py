@@ -186,9 +186,8 @@ async def main():
             screen.blit(pose, pose.get_rect(midbottom=game.player.midbottom))
         else:
             pygame.draw.rect(screen, (222, 163, 92), game.player, border_radius=9)
-        pygame.draw.rect(screen, (17, 25, 44), (0, 0, WIDTH, 76))
+        pygame.draw.rect(screen, (17, 25, 44), (0, 0, WIDTH, 50))
         screen.blit(font.render(f'CHEESE COLLECTOR   {len(CHEESES)-len(game.cheeses)}/{len(CHEESES)}', True, (255, 220, 86)), (15, 14))
-        screen.blit(small.render('Move: arrows / A D   Jump: Space / Up / W   Restart: R   Pause: P', True, (225, 231, 243)), (15, 49))
         if game.paused:
             pygame.draw.rect(screen, (17, 25, 44), (150, 170, 500, 160), border_radius=18)
             title = 'Paused'
